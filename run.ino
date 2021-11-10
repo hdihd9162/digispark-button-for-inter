@@ -17,7 +17,6 @@ void loop() {
   }
   else{                     
     digitalWrite(ledPin, LOW); 
-    
   }                     
+  DigiKeyboard.delay(80);
 }
-
