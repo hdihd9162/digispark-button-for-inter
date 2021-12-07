@@ -1,22 +1,27 @@
 #include "DigiKeyboard.h"
-const int buttonPin = A3;
-int ledPin = 1;
-
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(0, INPUT_PULLUP);
+pinMode(0, INPUT);
+pinMode(1, INPUT);
+//pinMode(2, INPUT);
 }
+
 void loop() {
-  
-  
-  if(digitalRead(0)== HIGH){
-    digitalWrite(ledPin, HIGH);
-    DigiKeyboard.sendKeyStroke(KEY_ENTER);  
-    
-//    delay(500);
-  }
-  else{                     
-    digitalWrite(ledPin, LOW); 
-  }                     
-  DigiKeyboard.delay(80);
+
+//if(digitalRead(0)==HIGH){
+//
+//DigiKeyboard.print("test0");
+//DigiKeyboard.delay(50);
+//
+//}
+
+if(digitalRead(1)==HIGH){
+
+
+DigiKeyboard.sendKeyStroke(KEY_ENTER);  
+DigiKeyboard.delay(350);
+
+}
+
+DigiKeyboard.delay(50);
+
 }
